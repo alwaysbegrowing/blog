@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/2023/07-19-11ty-on-ipfs.md",
+                "file": "content/posts/2023/06-04-hosting-static-sites-on-ipfs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/posts/2023/07-19-11ty-on-ipfs.md",
+                "file": "content/posts/2023/06-04-hosting-static-sites-on-ipfs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/posts/2023/07-19-11ty-on-ipfs.md",
+                "file": "content/posts/2023/06-04-hosting-static-sites-on-ipfs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/2023/07-19-11ty-on-ipfs.md"
+                "file": "content/posts/2023/06-04-hosting-static-sites-on-ipfs.md"
               }
             }
           }
@@ -148,26 +148,26 @@
   },
   "active": "bfdb51f5ba34510b",
   "lastOpenFiles": [
-    "_site/images/share/posts-preview.jpg",
-    "_site/posts/index.html",
-    "_site/posts",
-    "_site/images/share/posts-preview.svg",
-    "_site/images/share/about-dappling-preview.jpg",
-    "_site/about-dappling/index.html",
-    "_site/about-dappling",
-    "_site/images/share/about-dappling-preview.svg",
-    "_site/images/share/i11g-updating-an-immutable-blog-preview.jpg",
-    "_site/i11g-updating-an-immutable-blog/index.html",
-    "_site/i11g-updating-an-immutable-blog",
-    "_site/images/share/i11g-updating-an-immutable-blog-preview.svg",
-    "_site/images/share/i11g-easy-updating-immutable-blog-preview.jpg",
-    "_site/images/share/i11g-easy-updating-immutable-blog-preview.svg",
-    "_site/i11g-easy-updating-immutable-blog/index.html",
-    "_site/i11g-easy-updating-immutable-blog",
+    "content/posts/2023/07-19-11ty-on-ipfs.md",
+    "assets/favicon.svg",
+    "_site/logo.svg",
+    "assets/logo.svg",
+    "assets/images/logo.svg",
+    "_site/images/node-expand.svg",
+    "assets/images/node-expand.svg",
     "_site/workbox-f80c12b1.js",
     "_site/workbox-f80c12b1.js.map",
+    "_site/service-worker.js",
+    "_site/service-worker.js.map",
+    "_site/images/share/hosting-static-sites-on-ipfs-preview.jpg",
+    "_site/images/share/about-dappling-preview.jpg",
+    "_site/images/share/i11g-updating-an-immutable-blog-preview.jpg",
     "_site/images/share/subscribe-preview.jpg",
-    "_site/images/share/sample-page-with-custom-permalink-preview.jpg",
-    "_site/images/share/i11g-ipfs-11ty-dappling-preview.jpg"
+    "_site/index.html",
+    "_site/404.html",
+    "_site/hosting-static-sites-on-ipfs/index.html",
+    "_site/hosting-static-sites-on-ipfs",
+    "_site/tag/tooling/index.html",
+    "_site/tag/post/index.html"
   ]
 }

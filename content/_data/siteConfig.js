@@ -9,7 +9,7 @@ module.exports = {
     // OpenGraph tags and feeds.
     // Can also be used anywhere on the site as a Nunjucks variable:
     // {{ siteConfig.site.logo }}
-    title: 'dAppling\'s Blog',
+    title: 'dAppling dev blog',
     // Site description. Used in many places, including meta title,
     // OpenGraph tags and feeds.
     // It is also used as a fallback description if no custom description
@@ -196,7 +196,7 @@ module.exports = {
       // Color of the links on the site. Since XSLT stylesheet is a separate
       // entity from the rest of the site styling, it has to be
       // specified manually
-      baseColor: '#1773cf',
+      baseColor: '#ea22a8',
     },
     // Settings for RSS feed displaying post excerpts
     excerpts: {

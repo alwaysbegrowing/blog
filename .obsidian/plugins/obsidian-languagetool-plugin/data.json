@@ -1,0 +1,10 @@
+{
+  "serverUrl": "https://api.languagetoolplus.com",
+  "urlMode": "premium",
+  "glassBg": false,
+  "shouldAutoCheck": true,
+  "autoCheckDelay": 3000,
+  "pickyMode": false,
+  "apikey": "d1VIAb6VOhM97vEk",
+  "username": "kyletrusler@gmail.com"
+}
