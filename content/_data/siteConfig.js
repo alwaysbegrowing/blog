@@ -169,13 +169,7 @@ module.exports = {
   // are available on the post page. If this array is empty, share section
   // won't be displayed at all.
   // ---------------------------------------------------------------------------
-  shareButtons: [
-    'twitter',
-    'linkedin',
-    'facebook',
-    'hackernews',
-    'clipboard',
-  ],
+  shareButtons: ['twitter', 'linkedin', 'facebook', 'hackernews', 'clipboard'],
   // ---------------------------------------------------------------------------
   // Date formats used on the site (mostly somewhere around post contents).
   // ---------------------------------------------------------------------------
