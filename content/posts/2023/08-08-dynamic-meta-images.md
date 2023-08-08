@@ -1,7 +1,7 @@
 ---
 title: Poetry in Imagery • Meta Image Generation in Next.js
 description: Using @vercel/og and gradients to create web haikus.
-date: 2023-07-07
+date: 2023-08-08
 tags:
   - frontend
   - learning
