@@ -1,5 +1,5 @@
 ---
-title: A Picture Haiku: Meta Image Generation in Next.js
+title: A Picture Haiku • Meta Image Generation in Next.js
 description: Using @vercel/og and gradients to create web haikus.
 date: 2023-07-07
 tags:
