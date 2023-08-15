@@ -320,3 +320,5 @@ Here is a full preview of my changes. Still doesn’t quite hit the mark, but mi
 ## What did we learn?
 
 I don’t know about you, but I learned IPFS can be thought of as a website accessed on a path on a domain. One needs to consider that the URL will not be known at build time, and it seems like the best option right now is just shoving the whole situation into a familiar box. By using a domain and serving the IPFS content behind our CDN, we make the websites as the user expects.
+
+🙏
