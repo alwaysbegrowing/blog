@@ -9,7 +9,7 @@ tags:
 author: Namaskar 🙏
 ---
 
-At the core of dAppling, we both build code and host the completed app, ensuring a convenient experience for our users and one akin to centralized hosting for their users.
+At the core of [dAppling](https://dappling.network), we both build code and host the completed app, ensuring a convenient experience for our users and one akin to centralized hosting for their users.
 
 We interact with Filebase in two ways: putting things into the bucket and taking things out of the bucket. 
 
