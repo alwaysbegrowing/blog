@@ -44,4 +44,4 @@ or using paths (not recommended):
 
 **What are the downsides?** For one, the record will not be updated if you push changes to your code. This will need to be either automated (if the DNS supports it) or done manually.
 
-We do not currently try updating the IPNS record as we handle the CID resolution automatically when setting up a domain on [dAppling](https://dappling.network), but we think IPNS is an interesting access point, and it's more accessible.
+We do not currently try updating the IPNS record as we handle the CID resolution automatically when setting up a domain on [dAppling](https://dappling.network), but we think IPNS is an interesting access point!
