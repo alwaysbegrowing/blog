@@ -15,6 +15,10 @@ module.exports = function (eleventyConfig) {
 
   initialSetup(eleventyConfig);
 
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/dappling-analytics/dist/index.js': '/js/inject.js',
+  });
+
   // --- Layout aliases
 
   Object.entries(layoutAliases).forEach(([name, path]) => {
