@@ -1,3 +1,5 @@
+import { inject } from '/js/inject.js';
+
 const themeKey = 'theme';
 const darkSetting = 'dark';
 const lightSetting = 'light';
@@ -43,6 +45,7 @@ const getScrollPercent = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   const htmlElement = document.querySelector('html');
+  inject();
 
   // If that doesn't happen JS-based features won't work
 

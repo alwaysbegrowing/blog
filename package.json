@@ -32,6 +32,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "crypto-js": "^4.1.1",
+    "dappling-analytics": "^1.0.7",
     "eleventy-plugin-emoji": "^1.1.0",
     "eleventy-plugin-gen-favicons": "^1.1.2",
     "eleventy-plugin-pwa-v2": "^1.0.0",
