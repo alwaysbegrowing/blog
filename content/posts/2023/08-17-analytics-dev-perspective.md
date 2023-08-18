@@ -1,7 +1,7 @@
 ---
-title: The Stalker Inside Us All • dAppling Analytics Development
-description: The development process for dAppling's analytics.
-date: 2023-08-17
+title: Analytics = Good; No Analytics = Bad • dAppling Analytics Development
+description: An overview of the dappling-analytics package from a dev perspective.
+date: 2023-08-18
 tags:
   - analytics
   - development
@@ -10,7 +10,7 @@ author: Bookcliff
 
 One of the most consistently used tools here at dAppling is our site analytics - using `@vercel/analytics` to track page views, users, and custom events over time. Every Monday we sit down and say to ourselves, was last week a 'good' week or a 'bad' week. A 'good' week is more users, more page views, more events. A 'bad' week, less users, less page views, less events. Quickly glancing at our analytics page provides a simple categorization of our past week's marketing, business development, and engineering strategy - was it 'good' or was it 'bad'. And from this quick glance, we formulate our next week's strategy which will be similarly evaluated the following Monday. Week in, week out we follow this process.
 
-While this is largely an oversimplification of our company strategy and development, and our decision-making each week is much more complex than whether the previous week was 'good' or 'bad', the fact remains that site analytics provide a useful, quantifiable metric to drive our product. In conjunction with other metrics, feedback, and data points, site analytics offers vitally important insights into performance and engagement.
+While this is largely an oversimplification of our company strategy and development, and our decision-making each week is much more complex than whether the previous week was 'good' or 'bad', the fact remains that site analytics provide a useful, quantifiable metric driving our product development. In conjunction with other metrics, feedback, and data points, site analytics offer vitally important insights into performance and engagement.
 
 ##### Analytics Development
 
@@ -25,7 +25,7 @@ There are 2 main parts to the analytics.
    Currently, our analytics package is in its infancy and only tracks page views and unique users. Overtime, we plan to iterate and track additional, useful datapoints, such as customizable events and simpler integration for non-React/NextJS applications.
 
 2. API Endpoint & Database Storage
-   The inject analytics script triggers a POST request to our lambda function which is set up to send the information about the page view to our database. There, the page view information is stored using the project ID associated with the domain of the page viewed. This can then be displayed to the project owner when they visit the [dAppling frontend](https://dappling.network).
+   The inject analytics script triggers a POST request to our lambda function which is set up to send the information about the page view to our database. There, the page view information is stored using the project ID associated with the domain of the page viewed. This can then be displayed to the project owner when they visit the [dAppling frontend](https://dappling.network). This was developed with the goal of providing simple, quick-to-interpret analytics for any site on [dAppling](https://dappling.network).
 
 ##### Conclusion
 
