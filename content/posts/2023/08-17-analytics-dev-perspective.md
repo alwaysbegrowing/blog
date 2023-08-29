@@ -24,7 +24,7 @@ And all this comes with an easy-to-use interface right in the dappling app!
 
 1. **Installation via Your Favorite Package Manager**: Just like any other NPM package, installing dappling-analytics is simple: `npm install dappling-analytics` or `yarn install dappling-analytics`.
 
-2. **Integration with React and NextJS**: Our `<Analytics />` component, built with React, makes integration seamless. If you're using other frameworks, a bit more configuration might be needed (but we're here to help!).
+2. **Integration with React and NextJS**: Our `<Analytics />` component, built with React, makes integration seamless. Simply import it from our /react folder to access the component. If you're using other frameworks, a bit more configuration might be needed (but we're here to help!).
 
    `import { Analytics } from 'dappling-analytics/react'`
 
