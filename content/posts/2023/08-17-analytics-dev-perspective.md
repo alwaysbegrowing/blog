@@ -1,5 +1,5 @@
 ---
-title: Boost Your Website Insight with dappling-analytics! • A New Way to Track Your Success
+title: Boost Your Website Insight with dappling-analytics! - A New Way to Track Your Success
 description: Introducing dappling-analytics, a user-friendly analytics package tailored for developers. Explore how this package can transform your insight into users and page views.
 date: 2023-08-29
 tags:
