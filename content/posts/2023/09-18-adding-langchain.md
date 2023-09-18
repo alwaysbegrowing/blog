@@ -9,13 +9,13 @@ tags:
 author: Namaskar 🙏
 ---
 
-When I press commit and push on brand-new code ready for its dramatic debut, instead of confetti and fanfare, I'm given a little bop on my head as the scary ❌ icon tells me the deployment failed. There will be no code to show my friends; the link I was ready to share fizzles into some more work for me to do.
+When I press "commit & push" to send brand-new code on its dramatic debut, instead of confetti and fanfare, I'm given a little bop on my head as the scary ❌ icon tells me the deployment failed. There will be no code to show my friends; the link I was ready to share fizzles into some more work for me to do.
 
-The first thing I look at are the deployment logs, naturally, but reading logs and figuring out the problem and solution myself is so 2022. We've got AI APIs now. Sprinkling in some insights from our new overlords at OpenAI surely wouldn't hurt. Read on to see the adventure I had with prompt engineering in TypeScript with [LangChain](https://js.langchain.com/docs/get_started/introduction), adding automatic deployment debugging.
+The first thing I look at are the deployment logs, naturally, but reading logs and figuring out the problem and solution myself is so 2022. We've got AI APIs now. Sprinkling in some insights from our new companions provided by OpenAI surely wouldn't hurt. Read on to see the adventure I had with prompt engineering in TypeScript with [LangChain](https://js.langchain.com/docs/get_started/introduction), adding automatic deployment debugging to our app.
 
 ## The What and the Why
 
-This article is a technical overview of how I implemented a feature in our [dAppling.network](https://dappling.network) platform. We build and deploy code to IPFS. This feature adds an "AI Insights" panel for a failed deployment. The insights should help the user resolve the issue or tell them it's our fault, and we will fix it. The first-time experience is vital to us because we know how frustrating deploying code can be, and it sucks when your introduction to a platform is a big red X.
+This article is a technical overview of how I implemented a feature in our [dAppling.network](https://dappling.network) platform. We build and deploy code to IPFS. This feature adds an "AI Insights" panel for a failed deployment. The insights should help the user resolve the issue or tell them it's our fault, and we will fix it. The first-time experience is vital to us because we know how frustrating deploying code can be, and sucks when your introduction to a platform is a ❌.
 
 ## The Ins and the Outs
 
@@ -47,14 +47,14 @@ export const getPrompt = ({
   forChatGpt = false,
 }: {
   model: 'gpt-3.5' | 'gpt-4';
-  logs?: string;
+  logs: string;
   buildStep: string;
   totalBuildTimeSeconds: number;
   buildConfiguration?: string;
   forChatGpt?: boolean;
 }) => {
   const LOG_SIZE = model === 'gpt-4' ? 8_000 : 16_000;
-  const trimmedLogs = logs?.slice(-LOG_SIZE);
+  const trimmedLogs = logs.slice(-LOG_SIZE);
 
   const delimiter = '\n"""\n';
   return new PromptTemplate({
@@ -101,9 +101,14 @@ The prompt includes instructions for the LLM to coax the output using an [`Outpu
 
 ```typescript
 const schema = z.object({
-  errorCategory: errorCategories.describe(
-    'the error category the error falls into'
-  ),
+  errorCategory: z
+    .enum([
+      'systemError',
+      'configurationError',
+      'applicationError',
+      'unknownError',
+    ])
+    .describe('the error category the error falls into'),
   reason: z
     .string()
     .describe(
@@ -132,15 +137,16 @@ export const parser = StructuredOutputParser.fromZodSchema(schema);
 
 #### Output instructions
 
-The resulting `parser` generates instructions for the LLM with `parser.getFormatInstructions()`. Within this section, the rest of the text is sent to the LLM in order for the output to be parsed as expected.
+The resulting `parser` generates instructions for the LLM with `parser.getFormatInstructions()`. It first teaches it JSON, though that seems unnecessary, and then gives an example. After that, the Zod schema is included and sent along with the prompt. And yes, the whole message, example and all, is included at the bottom of every prompt. The example and even the `$schema` property. I can't complain about the extra tokens, though, because the instructions work surprisingly well. 
 
+```
 You must format your output as a JSON value that adheres to a given "JSON Schema" instance.
 
 "JSON Schema" is a declarative language that allows you to annotate and validate JSON documents.
 
 For example, the example "JSON Schema" instance
 
-```
+‍```
 {
   "properties": {
     "foo": {
@@ -153,26 +159,26 @@ For example, the example "JSON Schema" instance
   },
   "required": ["foo"]
 }
-```
+‍```
 
 would match an object with one required property, "foo". The "type" property specifies "foo" must be an "array", and the "description" property semantically describes it as "a list of test words". The items within "foo" must be strings.
 Thus, the object
 
-```
+‍```
 {
   "foo": ["bar", "baz"]
 }
-```
+‍```
 
 is a well-formatted instance of this example "JSON Schema". The object
 
-```
+‍```
 {
   "properties": {
     "foo": ["bar", "baz"]
   }
 }
-```
+‍```
 
 is not well-formatted.
 
@@ -180,7 +186,7 @@ Your output will be parsed and type-checked according to the provided schema ins
 
 Here is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:
 
-```json
+‍```json
 {
   "type": "object",
   "properties": {
@@ -218,11 +224,8 @@ Here is the JSON Schema instance your output must adhere to. Include the enclosi
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
 }
+‍```
 ```
-
-#### Reflecting on the Format Instructions
-
-As you can see, the Zod schema specified is transformed and sent along with the prompt. And yes, the whole message, example and all, is included at the bottom of every prompt. The example and even the `$schema` property. I can't complain about the extra tokens, though, because the instructions work surprisingly well.
 
 ### Send it off and Hope
 
