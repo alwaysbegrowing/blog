@@ -9,7 +9,7 @@ tags:
 author: Namaskar 🙏
 ---
 
-When I press "commit & push" to send brand-new code on its dramatic debut, instead of confetti and fanfare, I'm given a little bop on my head as the scary ❌ icon tells me the deployment failed. There will be no code to show my friends; the link I was ready to share fizzles into some more work for me to do.
+When I press "Commit & Push" to send brand-new code on its dramatic debut, instead of confetti and fanfare, I'm given a little bop on my head as the scary ❌ icon tells me the deployment failed. There will be no code to show my friends; the link I was ready to share fizzles into some more work for me to do.
 
 The first thing I look at are the deployment logs, naturally, but reading logs and figuring out the problem and solution myself is so 2022. We've got AI APIs now. Sprinkling in some insights from our new companions provided by OpenAI surely wouldn't hurt. Read on to see the adventure I had with prompt engineering in TypeScript with [LangChain](https://js.langchain.com/docs/get_started/introduction), adding automatic deployment debugging to our app.
 
@@ -137,7 +137,7 @@ export const parser = StructuredOutputParser.fromZodSchema(schema);
 
 #### Output instructions
 
-The resulting `parser` generates instructions for the LLM with `parser.getFormatInstructions()`. It first teaches it JSON, though that seems unnecessary, and then gives an example. After that, the Zod schema is included and sent along with the prompt. And yes, the whole message, example and all, is included at the bottom of every prompt. The example and even the `$schema` property. I can't complain about the extra tokens, though, because the instructions work surprisingly well. 
+The resulting `parser` generates instructions for the LLM with `parser.getFormatInstructions()`. It first teaches JSON, though that seems unnecessary, and then gives an example. After that, the Zod schema is included and sent along with the prompt. And yes, the whole message, example and all, is included at the bottom of every prompt. The example and even the `$schema` property. I can't complain about the extra tokens, though, because the instructions work surprisingly well. 
 
 ```
 You must format your output as a JSON value that adheres to a given "JSON Schema" instance.
@@ -230,7 +230,7 @@ Here is the JSON Schema instance your output must adhere to. Include the enclosi
 ### Send it off and Hope
 
 The prompt is sent to the OpenAI API, and the response is hopefully good. And hopefully adheres to the schema!
-Now the magic part of the parser.
+Now for the magic part of the parser.
 
 ```ts
 await parser.parse(completion);
@@ -292,4 +292,5 @@ Telling our users to leave the platform is a funny result. For all I did for the
 
 ### Go Forth and Fail
 
-Now is the best time to create some failing builds on [dAppling.network](https://dappling.network). We are trying to create the best experience possible for first-time deployments on dAppling and learning from every failure. Using LangChain seems useful, and having Zod schemas makes TypeScript support easy. Providing all the information while balancing the total token amount seemed to produce promising results. If this was interesting to you, I would recommend playing around with prompt engineering. I hope if you see a ❌ on our platform, you have success working alongside our AI companions.
+Now is the best time to create some failing builds on [dAppling.network](https://dappling.network). We are trying to create the best experience possible for first-time deployments on dAppling and learning from every failure. Using LangChain seems useful, and having Zod schemas makes TypeScript support easy. Providing all the information while balancing the total token amount seemed to produce promising results. If this was interesting to you, I would recommend playing around with prompt engineering. I hope, if you see a ❌ on our platform, you have success working alongside our AI companions.
+
