@@ -203,7 +203,7 @@ Remember how we don’t know *****where***** our website will be accessed? How a
 
 There’s a GitHub repo with these things that I failed to find, but the basic idea is to change the code to make the site work wherever it is hosted.
 
-1. œ a `base` into the document which will set the actual URL to a node on the document, accessible throughout the app.
+1. Inject a `base` tag into the document which will set the actual URL to a node on the document, accessible throughout the app.
     
     ```jsx
     const scriptTxt = '

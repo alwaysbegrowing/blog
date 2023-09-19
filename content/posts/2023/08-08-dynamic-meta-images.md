@@ -50,10 +50,10 @@ We scaled back, yet the essence remains. The images still capture the spirit, al
 ![](https://www.dappling.network/api/og?id=meow&type=deployment)
 ### Learnings and Such
 - Meta tags are first come first used. That means, if you have multiple meta tags on the page, it'll probably use the first one encountered. This confused me because instead of being able to define site-wide metadata, I had to use Next.js's [`<Head>`](https://nextjs.org/docs/pages/api-reference/components/head) element on every page. 
-```
+```html
 <Head>
-	<meta ...>
-	<meta ...>
+	<meta />
+	<meta />
 </Head>
 ```
 - Having an `svg` as a meta image will silently fail and ruin your day. Make them `png`.
@@ -64,7 +64,7 @@ We scaled back, yet the essence remains. The images still capture the spirit, al
 - `twitter:` tags are used by more than just twitter.
 
 The full list of image related tags used:
-```
+```html
 <meta property="og:url" content={url} />
 <meta itemProp="url" content={url} />
 <meta itemProp="image" content={imageUrl} />
