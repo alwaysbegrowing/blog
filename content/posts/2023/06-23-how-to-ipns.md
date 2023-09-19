@@ -23,13 +23,13 @@ The next steps you can try yourself, and you should be able to see [Uniswap's In
   - Choose the domain you want the users to type in. Usually, the root domain makes sense.
   - Add a text record with the subdomain of `_dnslink` and the value set as `dnslink=/ipfs/<CID>`
 
-```
+```text
 TXT _dnslink   dnslink=/ipfs/bafybeibngzztaxprxg6w423plup5kihnizu4t4fdcsq73wgqcayvjrxoaq
 ```
 
 If you want a subdomain, e.g. ipfs.example.com, the subdomain used would be `_dnslink.ipfs`
 
-```
+```text
 TXT _dnslink.ipfs dnslink=/ipfs/bafybeibngzztaxprxg6w423plup5kihnizu4t4fdcsq73wgqcayvjrxoaq
 ```
 
