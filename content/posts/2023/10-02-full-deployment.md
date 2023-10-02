@@ -9,9 +9,7 @@ tags:
   - 'tooling'
 ---
 
-In this walkthrough, we will explore how to deploy your site using dAppling and try out the features that make it a tool you'll want to use.
-
-At the end of this walkthrough, you will have a project on dAppling that will:
+In this walkthrough, we will explore how to deploy your site using dAppling and try out the features that make it a tool you'll want to use. At the end of this walkthrough, you will have a project on dAppling that will:
 
 - automatically update on **GitHub** code changes
 - be hosted on the **InterPlanetary File System** (IPFS)
