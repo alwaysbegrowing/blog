@@ -9,7 +9,7 @@ tags:
   - 'tooling'
 ---
 
-Welcome! I would love to share what I'm building at dAppling, a platform that aims to simplify the build and deployment process for IPFS. In this walkthrough, we will explore how to deploy your site using dAppling and try out the features that make it a tool you'll want to use.
+In this walkthrough, we will explore how to deploy your site using dAppling and try out the features that make it a tool you'll want to use.
 
 At the end of this walkthrough, you will have a project on dAppling that will:
 
