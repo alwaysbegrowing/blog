@@ -14,7 +14,7 @@ tags:
 ![The DNS Monitor Tool](/images/dns-monitor/monitor-demo.png)
 
 # Why is this needed? 
-In the last few months there have been several DNS hijacking attacks targeting web3 protocols. These included [Frax](x.com/fraxfinance/status/1719497560543658073?s=20), [Balancer]( https://twitter.com/Balancer/status/1704281611326357567), [Galxe]( https://twitter.com/galxe/status/1710305141016944654), [Velodrome]( https://twitter.com/VelodromeFi/status/1730040745736683679), [Aerodrome](https://x.com/aerodromefi/status/1736780326070870072?s=20), to name a few. 
+In the last few months there have been several DNS hijacking attacks targeting web3 protocols. These included [Frax](x.com/fraxfinance/status/1719497560543658073?s=20), [Balancer]( https://twitter.com/Balancer/status/1704281611326357567), [Galxe]( https://twitter.com/galxe/status/1710305141016944654), [Velodrome]( https://twitter.com/VelodromeFi/status/1730040745736683679), and [Aerodrome](https://x.com/aerodromefi/status/1736780326070870072?s=20) to name a few. 
 
 They all happened the exact same way. The DNS registrar they were using was social engineered, and the hacker was able to change the nameservers and take control over the domain.
 
