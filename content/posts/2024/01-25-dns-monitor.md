@@ -23,7 +23,8 @@ This is exactly what the tool looks for and would have detected all 5 of those a
 # How it works?
 All dAppling.network sites are automatically added to this list and get extra features to help them protect their users against these types of attacks.
 
-We are monitoring around 3000 different web3 domains. We check their nameservers every 5 minutes, and if we detect a change, we send out a notification to everyone who subscribed to nameserver changes for that domain + show on the tool the last time the nameservers changed. 
+We used [DeFiLlama](https://defillama.com) to build our original lists of sites to monitor. We then use cloudflare's [DNS over HTTPS api](https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/) to check each of the nameservers for changes every 5 minutes. If we detect a change, we send out a notification to everyone who subscribed to nameserver changes for that domain + update the monitoring table. 
+
 # Next Steps
 * [Check out the tool](https://dappling.network/monitor)
 * Deploy your site on [dAppling](https://dappling.network) to get this + other security features
