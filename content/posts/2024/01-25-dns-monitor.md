@@ -27,7 +27,7 @@ We used [DeFiLlama](https://defillama.com) to build our original lists of sites 
 
 # Next Steps
 * [Check out the tool](https://dappling.network/monitor)
-* Deploy your site on [dAppling](https://dappling.network) to get this + other security features
+* Deploy your site on [dAppling](https://dappling.network) to get this + other security features with 0 config. 
 * [DM me on twitter](https://twitter.com/0xbookland) if you have questions or want a site that's missing added.  
 
 # Thank you
