@@ -9,6 +9,7 @@ const {
   constants,
   events,
 } = require('./_11ty');
+const UpgradeHelper = require('@11ty/eleventy-upgrade-help');
 
 module.exports = function (eleventyConfig) {
   // --- Initial config
@@ -64,6 +65,7 @@ module.exports = function (eleventyConfig) {
   }
 
   // --- Consolidating everything under content folder
+  eleventyConfig.addPlugin(UpgradeHelper);
 
   return {
     dir: {
