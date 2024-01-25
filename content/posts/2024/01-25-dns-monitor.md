@@ -4,8 +4,8 @@ description: Introducting a tool that will help prevent + spread awareness for w
 author: Russell
 date: 2024-01-25
 tags:
-  - 'web32'
-  - 'tutorial'
+  - 'dns'
+  - 'security'
   - 'tooling'
 ---
 **TL;DR:** We built [dappling.network/monitor](https://dappling.network/monitor) to help prevent web3 DNS hijacking attacks. This tool alerts you to potential DNS hijacking. By monitoring over 3,000 Web3 domains for name server changes (everything on [DeFiLlama](https://defillama.com)), it helps you be aware when domains are hijacked. [Try the tool now](https://dappling.network/monitor) and be part of a safer DeFi community.
