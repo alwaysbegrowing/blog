@@ -1,5 +1,5 @@
 ---
-title: DNS Monitor to Detect Web3 Frontend Attacks
+title: Detect Web3 Frontend Attacks with dAppling DNS Monitor
 description: There's been 5+ DNS attacks in the last few months. We built a tool to help protect users. 
 author: Russell
 date: 2024-01-25
@@ -31,4 +31,4 @@ We also automatically add all dappling.network production domains to the monitor
 * [DM me on twitter](https://twitter.com/0xbookland) if you have questions or want a site that's missing added.  
 
 # Thank you
-Thank you to the [dAppling team](https://dappling.network) for building the tool. CerealSabre from [eth.limo](https://twitter.com/eth_limo) for helping me brainstorm this idea and [Derrick](https://twitter.com/pcfreak30) from [Lume](https://twitter.com/LumeWeb3) for helping me understand DNS at a deeper level + helping debug some weird DNS things. 
+Thank you to the [dAppling team](https://dappling.network) for building the tool. CerealSabre from [eth.limo](https://twitter.com/eth_limo) for helping me brainstorm this idea and [Derrick](https://twitter.com/pcfreak30) from [Lume](https://twitter.com/LumeWeb3) for helping me understand DNS at a deeper level. Also huge shout out to the [3DNS team](https://3dns.box/) who's helping reduce the DNS hijacking problem with their hybrid domains. 
