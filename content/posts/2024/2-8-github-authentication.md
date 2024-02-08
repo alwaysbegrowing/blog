@@ -110,12 +110,11 @@ At this point, we have a `gho` token for the user. From GitHub's blog post [on t
 
 ![GitHub App Installation](/images/github-app/github-app-installation.png)
 
-What's nice is you can now see the permissions our app is requesting as well as limiting which repos the app can access. Funnily enough, the warning about acting on the user's behalf is missing. After this step, we will now have an app token which we can also store in the cookie. Our new callbacks will look like the code below.
+What's nice is you can now see the permissions our app is requesting as well as limiting which repos the app can access. Funnily enough, the warning about acting on the user's behalf is missing. After this step, we will now have an app token which we can also store in the cookie. Our new callbacks will look like the code below. Note, the `githubAppAccessToken` is set in the middleware. More on that later.
 
 ```ts
 jwt({ token, profile, account }) {
   token.githubOauthAccessToken = account.access_token;
-  token.githubAppAccessToken = account.access_token;
   return token;
 },
 session({ session, token }) {
@@ -228,6 +227,8 @@ function AppConnection({ error }) {
 
 ## Conclusion
 
-While this does work, is it worth the effort? For our security conscious users at [dAppling](https://dappling.network), being explicit about exactly what permissions the apps they authorize have is important. The warning about acting on the user's behalf is not accurate for our use case and could be misleading. We have found that using the dual-auth approach of OAuth for log in and App authentication for repo access is a good compromise. It allows us to use the GitHub App token for the necessary permissions while avoiding the inaccurate warning. This is a good example of how to use the GitHub OAuth and App authentication flows in a Next.js project.
+While this does work, is it worth the effort? For our security conscious users at [dAppling](https://dappling.network), being explicit about permissions authorized apps have is important.
+
+We have found that using the dual-auth approach of OAuth for log in and App authentication for repo access is a good compromise. It allows us to use the GitHub App token for the necessary permissions while avoiding the inaccurate "act on your behalf" warning.
 
 If you have any questions or need help setting this up yourself, feel free to reach out to me on [Twitter](https://twitter.com/0xbookland).
