@@ -30,5 +30,8 @@ We also automatically add all dappling.network production domains to the monitor
 * Deploy your site on [dAppling](https://dappling.network) to get this + other security features with 0 config. 
 * [DM me on twitter](https://twitter.com/0xbookland) if you have questions or want a site that's missing added.  
 
+# Video Demo
+https://x.com/0xBookland/status/1757493370962739438?s=20 
+
 # Thank you
 Thank you to the [dAppling team](https://dappling.network) for building the tool. CerealSabre from [eth.limo](https://twitter.com/eth_limo) for helping me brainstorm this idea and [Derrick](https://twitter.com/pcfreak30) from [Lume](https://twitter.com/LumeWeb3) for helping me understand DNS at a deeper level. Also huge shout out to the [3DNS team](https://3dns.box/) who's helping reduce the DNS hijacking problem with their hybrid domains. 
